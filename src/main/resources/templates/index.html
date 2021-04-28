@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title th:remove="all">Email Example</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+  <body>
+     <p>
+      Hello, there!
+    </p>
+      <table>
+        <thead>
+           <tr>
+               <th>Item1</th>
+               <th>Item2</th>
+               <th>Item3</th>
+           </tr>
+        </thead>
+        <tbody>
+			<tr th:each="item: ${items}">
+			    <td th:text="${item.getitem1()}" />
+			    <td th:text="${item.getitem2()}" />
+			    <td th:text="${item.getitem3()}" />
+			</tr>
+		</tbody>
+	  </table>
+  </body>
+</html>
